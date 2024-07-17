@@ -12,6 +12,8 @@ and 2 Overpass turbo API scripts:
 1) pulling relation from specific ID
 2) searching for relations by name
 
+
+
 city_selector.py:
   This script selects 60 case study cities. The first 20 are selected by population and the remaining 40 are random. Cities that are too close to a city already added to the list are removed.
 
@@ -28,6 +30,8 @@ objects by hand in OSM and search for that ID to get the GeoJSON file to get the
 
 shapefile_trimmer.py
   This script iterates through Geofabrik shapefile exports that are all in one folder and returns a single shapefile that contains the point version of every feature only within the chosen city boundaries. This requires the arcpy package to work appropriately. Note: Mali and Somalia returned errors, but it is unclear why. All processes can be completed in ArcGIS following the process outlined in the paper.
+
+
 
 Overpass turbo 1):
 **NOTE: make sure that the city is contained in the bounding box. type is frequently 'boundary' but can be 'multipolygon' as below. Rarely, city boundaries are ways instead of relations. Just change 'rel' to 'way'.
